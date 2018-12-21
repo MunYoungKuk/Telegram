@@ -1,6 +1,8 @@
 import os
 from flask import Flask, request
-from pprint import pprint as pp
+#데이터를 가독성 좋게 만들어 주는 모듈
+#pprint 모듈을 가져오면서 pp로 새 이름 지정
+from pprint import pprint as pp 
 import requests
 import random
 
@@ -15,7 +17,7 @@ token = os.getenv('TELE_TOKEN')
 
 @app.route(f'/{token}', methods=['POST'])
 def telegram():
-    #Naver api를 쓰기 위한 변수 , 이미 환경변수에 지정해 놓음
+    #Naver api를 쓰기 위한 변수 , ~./bashrc에 환경변수로 지정해 놓음
     naver_client_id = os.getenv('NAVER_ID')
     naver_client_secret = os.getenv('NAVER_SECRET')
     
