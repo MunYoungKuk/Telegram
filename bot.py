@@ -17,7 +17,7 @@ msg = "야"
 
 method='sendMessage'
 msg_url = "https://api.hphk.io/telegram/bot{}/{}?chat_id={}&text={}".format(token,method,user_id,msg)
-#인자와 인자 구분할때 : & ,
+#인자와 인자 구분할때 : &
 
 print(msg_url)
 requests.get(msg_url)
